@@ -1,10 +1,43 @@
 /* General styling */
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 7px; /* Width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background of the scrollbar track */
+  border-radius: 10px; /* Optional: Rounded edges for the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+  border: 2px solid #f1f1f1; /* Space around the thumb to give it a border-like effect */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Darker color on hover */
+}
+
+/* Optional: Horizontal scrollbar */
+::-webkit-scrollbar-horizontal {
+  height: 8px; /* Height of the horizontal scrollbar */
+}
+
+::-webkit-scrollbar-thumb-horizontal {
+  background-color: #999; /* Thumb color for the horizontal scrollbar */
+  border-radius: 5px;
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: white;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
   }
   
   .register-container {
@@ -137,75 +170,6 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Custom scrollbar for webkit browsers */
-::-webkit-scrollbar {
-  width: 7px; /* Width of the entire scrollbar */
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1; /* Background of the scrollbar track */
-  border-radius: 10px; /* Optional: Rounded edges for the track */
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #888; /* Color of the scrollbar thumb */
-  border-radius: 10px; /* Rounded corners for the scrollbar thumb */
-  border: 2px solid #f1f1f1; /* Space around the thumb to give it a border-like effect */
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background-color: #555; /* Darker color on hover */
-}
-
-/* Optional: Horizontal scrollbar */
-::-webkit-scrollbar-horizontal {
-  height: 8px; /* Height of the horizontal scrollbar */
-}
-
-::-webkit-scrollbar-thumb-horizontal {
-  background-color: #999; /* Thumb color for the horizontal scrollbar */
-  border-radius: 5px;
-}
-
-
-body {
-  background-color: black;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  height: 100vh;
-  font-family: 'Montserrat';
-
-}
 
 i {
   font-size: 22px;
@@ -553,7 +517,6 @@ main {
   border-radius: 20px;
   background-color: rgba(255, 255, 255, 0.496);
   height: 35px;
-  color: white;
   margin-bottom: 10px;
 }
 
@@ -561,10 +524,6 @@ main {
   display: flex;
 }
 
-
-.show-more-popup {
-  display: flex;
-}
 
 
 
