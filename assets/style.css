@@ -1,0 +1,607 @@
+/* General styling */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: white;
+  }
+  
+  .register-container {
+    display: flex;
+    min-height: 100vh;
+  }
+  
+  .register-image {
+    flex: 1;
+    background-image: url('https://i.pinimg.com/736x/30/d4/f7/30d4f732f95a0e35806a92a4faa6e009.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    border-radius: 0 50px 50px 0;
+    background-position: center;
+  }
+  
+  .register-form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: #f9f9f9;
+}
+
+.register-form h2 {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+}
+
+.register-form form {
+    width: 100%;
+    max-width: 400px;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 20px;
+}
+
+.register-form form label {
+    font-weight: bold;
+    color: #0057c1;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.register-form form input {
+    width: 90%;
+    padding: 0.8rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.register-form form input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.register-form form button {
+    width: 100%;
+    padding: 0.8rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.register-form form button:hover {
+    background-color: #0056b3;
+}
+
+.messages {
+    margin-top: 1rem;
+    color: #d9534f;
+    font-size: 0.9rem;
+    text-align: center;
+}
+  
+  /* Mobile View */
+  @media (max-width: 768px) {
+    body{
+      background-image: url('https://i.pinimg.com/736x/30/d4/f7/30d4f732f95a0e35806a92a4faa6e009.jpg');
+    }
+
+    b
+    .register-container {
+      flex-direction: column;
+    }
+  
+    .register-form h2 {
+      color: white;
+    }
+
+    .register-image {
+      display: none;
+    }
+  
+    .register-form {
+      position: relative;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.8); 
+      height: auto;
+      margin: 1rem;
+      padding: 2rem;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+  }
+  .register-form form input {
+    width: 90%;
+    padding: 0.8rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+  .register-form form {
+      width: 100%;
+  }
+}
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 7px; /* Width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background of the scrollbar track */
+  border-radius: 10px; /* Optional: Rounded edges for the track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888; /* Color of the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for the scrollbar thumb */
+  border: 2px solid #f1f1f1; /* Space around the thumb to give it a border-like effect */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555; /* Darker color on hover */
+}
+
+/* Optional: Horizontal scrollbar */
+::-webkit-scrollbar-horizontal {
+  height: 8px; /* Height of the horizontal scrollbar */
+}
+
+::-webkit-scrollbar-thumb-horizontal {
+  background-color: #999; /* Thumb color for the horizontal scrollbar */
+  border-radius: 5px;
+}
+
+
+body {
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  height: 100vh;
+  font-family: 'Montserrat';
+
+}
+
+i {
+  font-size: 22px;
+  color: #7f808b;
+}
+
+a {
+  text-decoration: none;
+  color: #7f808b;
+}
+
+header {
+  height: 10vh;
+  width: 98%;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header img{
+  width: 200px;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.home-container {
+  background-color: rgba(255, 255, 255, 0.199);
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 40px;
+}
+
+.search-container {
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.46);
+  border-radius: 30px;
+  padding: 7px 20px;
+}
+
+
+
+#search {
+  width: 250px;
+  padding: 10px;
+  border: none;
+  background-color: transparent;
+  border-radius: 30px;
+}
+
+#search::placeholder {
+  color: white; /* Change this to your desired color */
+}
+
+.header-icons {
+  width: 7%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-icons i {
+  font-size: 20px;
+}
+
+.header-icons i:hover {
+  font-size: 23px;
+}
+
+.header-icons button{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.more-icon{
+  display: none;
+}
+
+main {
+  flex: 1;
+  height: calc(90vh - 50px);
+  display: flex;
+  flex-direction: row;
+  margin: 0 5px 0 5px;
+  gap: 10px; /* Increased gap for better spacing */
+}
+
+.main-section, .activity {
+  background-color: rgba(255, 255, 255, 0.082);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.479);
+  border-radius: 10px;
+  padding: 10px;
+  overflow-y: auto; 
+
+}
+
+
+.main-section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  box-sizing: border-box;
+}
+
+.highlights{
+  height: 200px;
+  background-color: transparent;
+  border-radius: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.highlights input{
+  background-color: transparent ;
+  padding: 10px;
+  color: white;
+  border-radius: 40px;
+  border: none;
+  width: 80%;
+
+}
+
+.highlights input:focus {
+  border-color: transparent;
+  outline: none;
+}
+
+.highlights button{
+  background-color: transparent;
+  border: none;
+}
+
+
+
+
+
+.posts-section {
+  flex-grow: 1; /* Take up remaining space */
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.46);
+  border-radius: 10px;
+  gap: 15px;
+  padding: 15px;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.post{
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  background-color: rgba(255, 255, 255, 0.082);
+  border-radius: 10px;
+  padding: 15px;
+  gap: 10px;
+}
+
+.post a{
+  color: white;
+}
+
+.post-header-parent{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+.post-header-parent .more-btn i{
+  color: white;
+  font-size: 14px;
+}
+
+.post-header-parent .more-btn i:hover{
+  color: rgba(255, 255, 255, 0.178);
+  font-size: 14px;
+}
+
+
+.post-header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  height: 30px;
+  width: 100%;
+
+}
+.post-header p{
+  font-size: 10px;
+}
+.post-header i, h4{
+  font-size: 14px;
+}
+
+.post-header i, h4 a:hover{
+  color: #a3a3a3;
+}
+
+.posts-section .post .post-content{
+  height: auto;
+  width: 96%;
+  background-color: rgba(0, 0, 0, 0.34);
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.post-content h4{
+  margin: 0;
+  padding-bottom: 5px;
+  font-size: 14px;
+  width: auto;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.036);
+}
+.post-content p{
+  font-size: 13px;
+}
+
+
+
+
+.activity {
+  width: 25%; 
+  display: flex;
+  flex-direction: column;
+  /* height: 80vh; */
+}
+
+/* Chat Section */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  /* border: 1px solid #ccc; */
+  border-radius: 8px;
+  background-color: #ffffff22;
+}
+
+.chat-header {
+  background-color: #00000061;
+  padding: 3px 15px;
+  border-bottom: 1px solid #ccc;
+  border-radius: 8px 8px 0 0;
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px;
+  background-color: #fafafa1f;
+  /* border-bottom: 1px solid #ccc; */
+}
+
+.message {
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 90%;
+}
+
+.message.received {
+  background-color: #0000004b;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+}
+
+.msg-profile{
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+  align-items: center;
+  font-size: 12px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.message p, i{
+  font-size: 13px;
+  color: white;
+}
+
+
+
+
+.base {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  height: 50px; /* Set a fixed height for the base section */
+  background-color: rgba(255, 255, 255, 0.1); /* Background color for the base section */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.479);
+  border-radius: 10px; 
+}
+
+
+
+
+
+/* Style the pop-up for the search bar and sidebar content */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(73, 73, 73, 0.056);
+  backdrop-filter: blur(10px); /* Blurred background effect */
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background-color: rgba(0, 0, 0, 0.56);
+  padding: 20px;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popup-content button{
+  width: 150px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.496);
+  height: 35px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.show-popup {
+  display: flex;
+}
+
+
+.show-more-popup {
+  display: flex;
+}
+
+
+
+/* General Styles for Responsiveness */
+@media screen and (max-width: 768px) {
+  header img{
+      width: 150px;
+  }
+  
+  /* Hide sidebar and other non-essential elements */
+  .activity, .base, .header-icons{
+      display: none;
+  }
+
+  /* Make the main section take full width */
+  .main-section {
+      width: 100%;
+      margin: 5px;
+      padding: 5px;
+      gap: 5px;
+      background-color: rgba(65, 65, 65, 0.767);
+  }
+
+  /* Show only the image and 'more' icon in the header */
+  .header .logo, .header .more-icon {
+      display: inline-block;
+  }
+
+  /* Add styling for the more icon */
+  .more-icon {
+      display: inline-block;
+      cursor: pointer;
+      margin-right: 15px;
+      font-size: 1.5em;
+  }
+
+  
+  
+  
+}

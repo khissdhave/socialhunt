@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="register-container">
+  <div class="register-image"></div>
+  <div class="register-form">
+    <h2>Login</h2>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Sign In</button>
+  </form>
+  {% if messages %}
+    <ul>
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+  <p style="color: white;">Don't have an account?</p>
+  <a style="color: blue;" href="{% url 'register' %}">Register</a>
+  </div>
+  
+</div>
+
+
+{% endblock %}

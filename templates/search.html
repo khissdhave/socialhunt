@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<header>
+    <h2>SocialHunt</h2>
+    <div class="navigation">
+        
+       
+    </div>
+    <div class="header-icons">
+        <form action="{% url 'logout' %}" method="post" class="logout-form">
+            {% csrf_token %}
+            <button type="submit"><i class="bi bi-box-arrow-right"></i></button>
+        </form>
+        
+    </div>
+    <i class="bi bi-app more-icon"></i>
+</header>
+
+<div class="popup">
+    <div class="popup-content">
+        <!-- Search bar and sidebar content -->
+        <form action="{% url 'logout' %}" method="post" class="logout-form">
+            {% csrf_token %}
+            <button type="submit">Logout</button>
+        </form>
+        <div style="border-bottom: 1px solid rgba(255, 255, 255, 0.084); width: 70%;">
+            
+        </div>
+        <div class="sidebar-content">
+            <!-- Sidebar content here -->
+            <div class="chat-container">
+                <div class="chat-header">
+                    <h3>Disclaimer !</h3>
+                </div>
+                <div class="chat-messages">
+                    <!-- Example messages -->
+                    <div class="message received">
+    
+                        <h5>Accuracy of Results</h5>
+                        <p>This tool provided is designed to generate possible links to platforms that might host users with the specified username. However, the results are not guaranteed to be 100% accurate. There may be instances where:</p>
+                        <ul style="font-size: 12px;">
+                            <li> The links lead to platforms with users who share the same username but are not the intended user.</li>
+                            <li>Following the links results in no relevant content or a "404 error" indicating the link is broken. This tool is intended to assist in searches but cannot guarantee definitive or accurate outcomes.</li>
+                        </ul>
+                        <h5>General Information</h5>
+    
+                        <p>
+                            The information provided on this website is for general informational purposes only. While we strive to keep the content up-to-date and accurate, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability with respect to the website or the information, products, services, or related graphics contained on the website for any purpose. Any reliance you place on such information is strictly at your own risk.
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<main>
+    <div class="main-section">
+        <div class="highlights">
+                <form method="post" class="search-container">
+                    {% csrf_token %}
+                    <input type="text" name="username"  class="search-input" placeholder="Enter a username" required>
+                    <button type="submit" class="search-btn"><i class="bi bi-search"></i></button>
+                </form>
+                
+        </div>
+
+        <div class="posts-section">
+            <h3>Search Results:</h3>
+            {% if search_links %}
+                {% for link in search_links %}
+                <div class="post">
+                    <div class="post-content">
+                        <h4>
+                            <a target="_blank" href="{{ link }}">
+                                <i style="font-size: 18px; margin-right: 5px;" class="bi bi-dash"></i> 
+                                {{ link }}
+                            </a>
+                        </h4>
+                        <p>Result found for: {{ link }}</p>
+                        <a style="margin-top:4px; border-top: 1px solid grey; padding-top:5px; color:green; font-size:12px;" 
+                           href="{{ link }}" target="_blank" class="view-link">
+                           <i style="font-size: 12px; margin-right: 5px;" class="bi bi-box-arrow-up-right"></i> 
+                           Open
+                        </a>
+                    </div>
+                </div>
+                {% endfor %}
+            {% else %}
+            <div class="post">
+                <div class="post-content">
+                    <h4>
+                        No search results found
+                    </h4>
+                    <p>Kindly enter a username to begin the search</p>
+                </div>
+            </div>
+            {% endif %}
+        </div>
+        
+
+    </div>
+    <div class="activity">
+        <div class="chat-container">
+            <div class="chat-header">
+                <h3>Disclaimer !</h3>
+            </div>
+            <div class="chat-messages">
+                <!-- Example messages -->
+                <div class="message received">
+
+                    <h5>Accuracy of Results</h5>
+                    <p>This tool provided is designed to generate possible links to platforms that might host users with the specified username. However, the results are not guaranteed to be 100% accurate. There may be instances where:</p>
+                    <ul style="font-size: 12px;">
+                        <li> The links lead to platforms with users who share the same username but are not the intended user.</li>
+                        <li>Following the links results in no relevant content or a "404 error" indicating the link is broken. This tool is intended to assist in searches but cannot guarantee definitive or accurate outcomes.</li>
+                    </ul>
+                    <h5>General Information</h5>
+
+                    <p>
+                        The information provided on this website is for general informational purposes only. While we strive to keep the content up-to-date and accurate, we make no representations or warranties of any kind, express or implied, about the completeness, accuracy, reliability, suitability, or availability with respect to the website or the information, products, services, or related graphics contained on the website for any purpose. Any reliance you place on such information is strictly at your own risk.
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</main>
+<div class="base"></div>
+{% endblock %}
